@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <!-- TODO: Add multiple choice question here -->
+            <h3> What is the capital of Brazil?</h3>
+            <button id="b1">Rio de Janeiro</button>
+            <button id="b2">São Paulo</button>
+            <button id="b3">Brasília</button>
+            <button id="b4">Bahia</button>
+            <button id="b5">Goiânia</button>
+            <p id="p1"></p>
+        </div>
+        <script>
+            document.querySelector('#b1').addEventListener('click', function(e)
+            {
+                let b1 = document.querySelector('#b1');
+                let p1 = document.querySelector('#p1');
+                b1.style.backgroundColor = 'red';
+                p1.innerHTML = 'Incorrect';
+                e.preventDefault()
+            })
+            document.querySelector('#b2').addEventListener('click', function(e)
+            {
+                let b1 = document.querySelector('#b2');
+                let p1 = document.querySelector('#p1');
+                b1.style.backgroundColor = 'red';
+                p1.innerHTML = 'Incorrect';
+                e.preventDefault()
+            })
+            document.querySelector('#b3').addEventListener('click', function(e)
+            {
+                let b1 = document.querySelector('#b3');
+                let p1 = document.querySelector('#p1');
+                b1.style.backgroundColor = 'green';
+                p1.innerHTML = 'Correct';
+                e.preventDefault()
+            })
+            document.querySelector('#b4').addEventListener('click', function(e)
+            {
+                let b1 = document.querySelector('#b4');
+                let p1 = document.querySelector('#p1');
+                b1.style.backgroundColor = 'red';
+                p1.innerHTML = 'Incorrect';
+                e.preventDefault()
+            })
+            document.querySelector('#b5').addEventListener('click', function(e)
+            {
+                let b1 = document.querySelector('#b5');
+                let p1 = document.querySelector('#p1');
+                b1.style.backgroundColor = 'red';
+                p1.innerHTML = 'Incorrect';
+                e.preventDefault()
+            })
+        </script>
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3>What country is Harvard situated?</h3>
+            <form>
+                <input id="answer" placeholder="Country" type="text">
+                <button id="confirm">Confirm</button>
+                <p id="correct" ></p>
+            </form>
+
+            <!-- TODO: Add free response question here -->
+            <script>
+                            // TODO: Add code to check answers to questions
+                document.querySelector('#confirm').addEventListener('click', function(e) {
+                    let answer_input = document.querySelector('#answer');
+                    let correct_check = document.querySelector('#correct');
+                    let answer = document.querySelector('#answer').value;
+                    if (answer === 'United States' || answer === 'United States of America'|| answer === 'US' || answer === 'USA')
+                    {
+                        answer_input.style.backgroundColor = 'green';
+                        correct_check.innerHTML = 'Correct';
+
+                    }
+                    else
+                    {
+                        answer_input.style.backgroundColor = 'red';
+                        correct_check.innerHTML = 'Incorrect';
+                    }
+                    e.preventDefault()
+            });
+
+
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

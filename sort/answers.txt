@@ -1,0 +1,35 @@
+sort1 uses: bubble
+
+How do you know?: huge difference in processing random50000 and sorted 50000, showing that the upper bound(big O)
+and lower bound(omega) are not the same like in merge and selection.
+
+sort2 uses: merge
+
+How do you know?: the avg time it takes to sort did not show significative difference from sorted to random big number
+indicating no difference between upper and lower bound, so the upper bound and lower bound are likely the same. As it
+took in avg less time then sort 3, it is probably merge.
+
+sort3 uses: selection
+
+How do you know?: the avg time it takes to sort did not show significative difference from sorted to random big number
+indicating no difference between upper and lower bound, so the upper bound and lower bound are likely the same. As it
+took in avg more time then sort 3, it is probably selection.
+
+    //how I decided which method sort is using
+        if sort takes the same time to solve a sorted and a random big n:
+            sort that take in avg less amount of time is merge and the other is selection
+        if sort takes significantly less time between a random big number and an big sorted number:
+            sort is probably bubble
+
+//tests done
+//sort1
+random real time = ~8.915s
+sorted real time = ~0.980s
+
+/sort2
+random real time = ~0.826s
+sorted real time = ~1.443s
+
+/sort3
+random real time = ~4.007s
+sorted real time = ~4.043s
